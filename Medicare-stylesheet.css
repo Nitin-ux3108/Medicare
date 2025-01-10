@@ -1,0 +1,351 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* Styling for navbar */
+.sticky-top{
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+.navbar{
+    padding: 5px 0 5px 0;
+    background: linear-gradient(to right, #ebf8f5, #9adbcc);
+    box-shadow: 0 8px 15px #141414;
+}
+.container{
+    height: 70px;
+    display: flex;
+    padding: 0 1rem 0 1rem;
+    margin: 0 1.5rem 0 1.5rem;
+    justify-content: flex-start;
+    align-content: center;
+}
+.logo-style{
+    width: 4.5rem;
+    padding: 6px;
+}
+.logo{
+    position: relative;
+    top: 0px;
+}
+.navbar-nav-rsp{
+    display: flex;
+}
+.navbar-nav{
+    display: flex;
+    padding: 6px;
+    margin-left: 5px;
+    align-content: center;
+    flex-wrap: wrap;
+}
+a{
+    text-decoration: none;
+}
+.nav-item{
+    font-size: 20px;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+.nav-item:hover{
+    border-radius: 20px;
+    background-color: #51ea89a6;
+    cursor: pointer;
+}
+.col-lg-auto{
+    padding: 5px;
+    margin-left: 8px;
+}
+.nav-link{
+    display: flex;
+    margin-right: 8px;
+    margin-left: 8px;
+    color: #000000; 
+}
+
+.nav-item-st{
+    margin-left: 2rem;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #08d653;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+}
+.nav-item-st:hover{
+    background-color: #51ea89a6;
+    cursor: pointer;
+}
+nav svg{
+    fill: #000000;
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    padding: 0 20px;
+    display: none;
+}
+@media(max-width: 865px){
+    .navbar-nav{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.227);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.9s ease-out;
+        backdrop-filter: blur(5px);
+    }
+    .col-lg-auto{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 8px 10px;
+        justify-content: flex-start;
+    }
+    .nav-item-st{
+        margin-left: 8px;
+    }
+    .open-sidebar-button{
+        margin-left: auto;
+    }
+    .open-sidebar-button{
+        height: 45px;
+        padding-top: 18px;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        display: block;
+    }
+    #sidebar-active:checked ~ .navbar-nav{
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+    @media(max-width:350px) and (min-width:320px){
+        .navbar-nav{
+            width: 343px;
+        }
+    }
+    @media(max-width:320px){
+        .navbar-nav{
+            width: 319px;
+        }
+    }
+}
+/* End of styling for navbar */
+
+.main-image{
+    height: 500px;
+    background-image: url(header-image-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 6px 6px #141414;
+}
+.bg-blur{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);    
+}
+.head-text{
+    position: absolute;
+    top: 25%;
+}
+.head-text span{
+    padding: 0 5px 0 5px;
+    margin: 0 45px 0 45px;
+}
+.txt-sm{
+    position: relative;
+    font-size: 20px;
+    color: #0a2e2e;
+}
+.txt-lr{
+    color: #0a2e2e;
+    font-size: 50px;
+    font-weight: 700;
+}
+@media(max-width:405px){
+    .txt-sm{
+        font-size: 15px;
+    }
+    .txt-lr{
+        font-size: 35px;
+    }
+}
+
+/* Styling for main content */
+.content-heading{
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    background-color: #9adbcc;
+    height: 100px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.content-title{
+    font-size: 32px;
+    font-weight: 700;
+}
+.content-icon{
+    position: relative;
+    top: 6px;
+}
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0 1rem;
+    margin: 0 1.5rem 0 1.5rem;
+    justify-content: flex-start;
+}
+.card-item{
+    display: flex;
+    
+    margin-top: 15px;
+    padding: 10px;
+    width: 70%;
+    background-color: #d2e9e3;
+    border-radius: 10px;
+}
+.card-content{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card-title{
+    text-align: center;
+    font-size: 32px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card-img{
+    margin-right: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.card-txt{
+    font-size: 22px;
+}
+p{
+    margin-bottom: 0;
+}
+.card-link{
+    background-color: #9adbcc;
+    border-radius: 15px;
+}
+.card-link a{
+    justify-content: center;
+}
+.img-style{
+    height: 100%; 
+    clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.imgRsp{
+    width: 87%;
+}
+.linkRsp{
+    width: 82%;
+}
+@media(max-width:1024px){
+    .card-item{
+        width: 100%;
+    }
+}
+@media(max-width:680px){
+    .card-item{
+        flex-direction: column-reverse;
+    }
+    .img-style{
+        clip-path:  polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .imgRsp{
+        width: 100%;
+    }
+    .card-content{
+        margin-left: 0;
+    }
+    .card-txt{
+        margin-left: 5px;
+        font-size: 16px;
+    }
+    .linkRsp{
+        width: 100%;
+    }
+}
+/* End of Styling for main content */
+
+/* Styling for footer */
+.footer {
+    margin-top: 20px;
+    background-color: #9adbcc;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+/* EnSd of Styling for footer */
